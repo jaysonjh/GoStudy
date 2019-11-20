@@ -49,7 +49,6 @@ func TestCounterWaitGroup(t *testing.T) {
 			wg.Done()
 		}()
 	}
-	// time.Sleep(time.Millisecond * 50)
 	/// 等待所有的协程完成后执行后续操作
 	wg.Wait()
 	t.Logf("Counter = %d", counter)
